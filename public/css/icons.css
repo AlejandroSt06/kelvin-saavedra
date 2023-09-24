@@ -1,0 +1,8 @@
+:root{
+    --main-color:#222831;
+    --primary-color:#393E46;
+    --secondary-color:#FFD369;
+    --tertiary-color:#EEEEEE;
+    --svg-color:var(--secondary-color);
+}
+

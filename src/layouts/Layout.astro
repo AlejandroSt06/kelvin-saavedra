@@ -1,0 +1,71 @@
+---
+import Header from '../components/Header.jsx';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header client:idle />
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root{
+		--main-color:#222831;
+		--primary-color:#393E46;
+		--secondary-color:#FFD369;
+		--tertiary-color#EEEEEE;
+		--card-bg: var(--primary-color);
+		--text-color:var(--tertiary-color)
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: var(--main-color);
+		color: var(--text-tertiary-color);
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	svg{
+		color: var(--secondary-color);
+	}
+/* Stile generale della scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Larghezza della scrollbar */
+}
+
+/* Stile del "pollice" della scrollbar (la parte che puoi trascinare) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* Colore del "pollice" */
+  border-radius: 6px; /* Angoli arrotondati */
+}
+
+/* Stile della "traccia" della scrollbar (la parte di sfondo) */
+::-webkit-scrollbar-track {
+  background-color: var(--main-color); /* Colore della "traccia" */
+  border-radius: 6px; /* Angoli arrotondati */
+}
+
+</style>
