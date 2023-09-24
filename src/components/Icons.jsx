@@ -2,6 +2,19 @@
 import "../../public/css/icons.css"
 import React, { useState } from 'react';
 
+const HamburgerButton = ({ isOpen, toggleMenu }) => {
+    return (
+      <div className={`hamburger-button ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+{isOpen ?
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="multiply"><path fill="#D7DBDF" d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
+:
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="bars"><path fill="#D7DBDF" d="M3,8H21a1,1,0,0,0,0-2H3A1,1,0,0,0,3,8Zm18,8H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Zm0-5H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z"></path></svg>
+}
+      </div>
+    );
+  };
+  
+
 
 function Moon() {
     const svgStyles = {
@@ -48,4 +61,4 @@ function Linkedin(){
         <path  d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z"></path></svg>
     )
 }
-export default { Moon, Sun, Instagram,Linkedin};
+export default { Moon, Sun, Instagram,Linkedin,HamburgerButton};

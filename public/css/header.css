@@ -4,6 +4,7 @@
     --secondary-color: #FFD369;
     --tertiary-color: #EEEEEE;
     --nav-link: var(--tertiary-color);
+    --bg-button: var(--secondary-color)
 }
 
 header {
@@ -18,19 +19,55 @@ header {
 
 }
 
+nav {
+    display: flex;
+
+
+}
+
 nav ul {
     display: flex;
     gap: 1em;
 }
-
+.hamburger-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
 @media screen and (max-width:550px) {
     header {
         padding: 0 2.2em;
     }
 
-    nav ul {
-        display: none;
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1111;
+        background-color: var(--main-color);
+        height: 100%;
+    }
 
+    nav ul {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--main-color);
+        /* Colore di sfondo del menu */
+        padding: 10px;
+        /* Spaziatura interna del menu */
+
+        height: 100%;
+        /* Occupa tutta l'altezza dello schermo */
+        width: 300px;
+        /* Larghezza fissa del menu */
+    }
+    .hamburger-button{
+        display: flex;
     }
 }
 
@@ -65,4 +102,30 @@ button {
 
 .bold-heading {
     color: var(--svg-color);
+}
+
+.menu {
+    display: none;
+    /* Nascondi il menu di default */
+}
+
+.menu.open {
+    display: block;
+    /* Mostra il menu quando è aperto */
+}
+
+/* Aggiungi altri stili per il menu come posizionamento, sfondo, ecc. */
+
+/* Aggiungi stili per il pulsante hamburger */
+
+
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.line.open {
+    background-color: #fff;
+    /* Cambia il colore quando il menu è aperto */
 }

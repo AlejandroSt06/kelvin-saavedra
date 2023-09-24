@@ -14,6 +14,9 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Fredoka&family=Koulen&family=Montserrat&family=Nunito&family=Nunito+Sans:opsz@6..12&family=Open+Sans&family=Playfair+Display:ital@1&family=Poppins:ital@1&family=Quicksand&family=Raleway&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -36,6 +39,20 @@ const { title } = Astro.props;
 		background: var(--main-color);
 		color: var(--text-tertiary-color);
 		background-size: 224px;
+	}
+	body{
+		margin: 0;
+		font-family: 'Bricolage Grotesque', sans-serif;
+font-family: 'Fredoka', sans-serif;
+font-family: 'Koulen', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+
+
 	}
 	code {
 		font-family:
