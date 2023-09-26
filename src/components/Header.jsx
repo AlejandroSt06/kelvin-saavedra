@@ -51,10 +51,10 @@ function Header(){
 return(
 <header>
     <a href = "/">
-        <h2><span class="bold-heading">Kelvin</span> Saavedra</h2>
+        <h2 className="header-h2"><span class="bold-heading">Kelvin</span> Saavedra</h2>
     </a>
     
-    <nav className={`menu ${menuOpen ? 'open' : ''}`}>
+    <nav className={`menu pt-3 ${menuOpen ? 'open' : ''}`}>
         <ul>
             <li><a href="/">Works</a></li>
             <li><a href="/about">About</a></li>
@@ -66,7 +66,6 @@ return(
         
     </nav>
     <HamburgerButton isOpen={menuOpen} toggleMenu={toggleMenu} />
-    
 </header>
 )}
 

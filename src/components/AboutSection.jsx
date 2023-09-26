@@ -32,12 +32,12 @@ function AboutSection() {
 
     return (
         <section id="about" className='pb-lg-5 px-4'>
-            <div className="container pt-3 pt-lg-1 mt-5 ">
+            <div className="container pt-3 pt-lg-1 mt-3 ">
                 <h2 className='about-h2 text-center'>About Me</h2>
                 <p className='text-center'>Here you will find more information about me and what I do</p>
             </div>
             <div className='ps-3'>
-                <div className= "d-flex flex-column flex-lg-row  g-5 py-lg-3 mt-lg-4 justify-content-center">
+                <div className= "d-flex flex-column flex-lg-row  g-1 py-lg-3 mt-lg-3 justify-content-center">
 
                     <div className="col-10 col-sm-8 col-lg-6">
                         <img
